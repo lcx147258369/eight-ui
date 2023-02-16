@@ -1,0 +1,74 @@
+@import './var.scss';
+:root {
+    --eig-black:#{$black};
+    --eig-white: #{$white};
+    --eig-gray-1: #{$gray-1};
+    --eig-gray-2: #{$gray-2};
+    --eig-gray-3: #{$gray-3};
+    --eig-gray-4: #{$gray-4};
+    --eig-gray-5: #{$gray-5};
+    --eig-gray-6: #{$gray-6};
+    --eig-gray-7: #{$gray-7};
+    --eig-gray-8: #{$gray-8};
+    --eig-red:#{$red};
+    --eig-blue: #{$blue};
+    --eig-orange: #{$orange};
+    --eig-orange-dark: #{$orange-dark};
+    --eig-orange-light: #{$orange-light};
+    --eig-green: #{$green};
+
+    //渐变色
+    --eig-gradient-red: #{$gradient-red};
+    --eig-gradient-orange: #{$gradient-orange};
+
+    // 组件基础色
+    --eig-primary-color: #{$primary-color};
+    --eig-success-color: #{$success-color};
+    --eig-danger-color: #{$danger-color};
+    --eig-warning-color: #{$warning-color};
+    --eig-text-color: #{$text-color};
+    --eig-text-color-2: #{$text-color-2};
+    --eig-text-color-3: #{$text-color-3};
+    --eig-text-link-color: #{$text-link-color};
+    --eig-active-color: #{$active-color};
+    --eig-active-opacity: #{$active-opacity};
+    --eig-disabled-opacity: #{$disabled-opacity};
+    --eig-background-color: #{$background-color};
+    --eig-background-color-light: #{$background-color-light};
+
+    // padding
+    --eig-padding-base: #{$padding-base};
+    --eig-padding-xs: #{$padding-xs};
+    --eig-padding-sm: #{$padding-sm};
+    --eig-padding-md: #{$padding-md};
+    --eig-padding-lg: #{$padding-lg};
+    --eig-padding-xl: #{$padding-xl};
+
+    // font
+    --eig-font-size-xs: #{$font-size-xs};
+    --eig-font-size-sm: #{$font-size-sm};
+    --eig-font-size-md: #{$font-size-md};
+    --eig-font-size-lg: #{$font-size-lg};
+    --eig-font-weight-bold: #{$font-weight-bold};
+    --eig-line-height-xs: #{$line-height-xs};
+    --eig-line-height-sm: #{$line-height-sm};
+    --eig-line-height-md: #{$line-height-md};
+    --eig-line-height-lg: #{$line-height-lg};
+    --eig-base-font-family: #{$base-font-family};
+    --eig-price-integer-font-family: #{$price-integer-font-family};
+
+    // 动画
+    --eig-animation-duration-base: #{$animation-duration-base};
+    --eig-animation-duration-fast: #{$animation-duration-fast};
+    --eig-animation-timing-function-enter: #{$animation-timing-function-enter};
+    --eig-animation-timing-function-leave: #{$animation-timing-function-leave};
+
+    // border
+
+    --eig-border-color: #{$border-color};
+    --eig-border-width-base: #{$border-width-base};
+    --eig-border-radius-sm: #{$border-radius-sm};
+    --eig-border-radius-md: #{$border-radius-md};
+    --eig-border-radius-lg: #{$border-radius-lg};
+    --eig-border-radius-max: #{$border-radius-max};
+}

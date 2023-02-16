@@ -1,0 +1,28 @@
+@import '../Common/index.scss';
+:root {
+    --eig-image-placeholder-text-color: $gray6; 
+    --eig-border-radius: $border-round;
+    --eig-image-placeholder-background-color:$gray1;
+    --eig-image-loading-icon-size: 32px;
+    --eig-image-loading-icon-color: $gray4;
+    --eig-image-error-icon-size: 32px;
+    --eig-image-error-icon-color: $gray4;
+}
+.eight-image {
+    display: inline-block;
+    position: relative;
+    
+    &--round {
+        overflow: hidden;
+        border-radius: var(--eig-border-radius);
+        .eig-image__img {
+            border-radius: inherit;
+        }
+    }
+    &__img {
+        display: inline-block;
+        height: 100%;
+    }
+
+
+}

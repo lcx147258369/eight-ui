@@ -1,0 +1,202 @@
+@import './var.scss';
+
+:root {
+    --eig-button-mini-height:#{$button-mini-height};
+    --eig-button-mini-padding: #{$button-mini-padding};
+    --eig-button-mini-font-size: #{$button-mini-font-size};
+    --eig-button-small-height: #{$button-small-height};
+    --eig-button-small-padding: #{$button-small-padding};
+    --eig-button-normal-padding: #{$button-normal-padding};
+    --eig-button-normal-font-size: #{$button-normal-font-size};
+    --eig-button-large-height: #{$button-large-height};
+    --eig-button-default-height: #{$button-default-height};
+    --eig-button-default-line-height: #{$button-default-line-height};
+    --eig-button-default-font-size: #{$button-default-font-size};
+    --eig-button-default-background-color: #{$button-default-background-color};
+    --eig-button-default-border-color: #{$button-default-border-color};
+    --eig-button-primary-color: #{$button-primary-color};
+    --eig-button-primary-background-color:#{$button-primary-background-color};
+    --eig-button-primary-border-color: #{$button-primary-border-color};
+    --eig-button-success-color: #{$button-success-color};
+    --eig-button-success-background-color: #{$button-success-background-color};
+    --eig-button-danger-color: #{$button-danger-color};
+    --eig-button-danger-background-color:#{$button-danger-background-color};
+    --eig-button-danger-border-color: #{$button-danger-border-color};
+    --eig-button-warning-color: #{$button-warning-color};
+    --eig-button-warning-background-color: #{$button-warning-background-color};
+    --eig-button-warning-border-color: #{$button-warning-border-color};
+    --eig-button-border-width: #{$button-border-width};
+    --eig-button-border-radius: #{$button-border-radius};
+    --eig-button-round-border-radius:#{$button-round-border-radius};
+    --eig-button-plain-background-color:#{$button-plain-background-color};
+    --eig-button-disabled-opacity: #{$button-disabled-opacity};
+    --eig-button-icon-size: #{$button-icon-size};
+    --eig-button-loading-icon-size: #{$button-loading-icon-size};
+
+}
+.eig-button {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    height: var(--eig-button-default-height);
+    margin: 0;
+    padding: 0;
+    font-size: var(--eig-button-default-font-size);
+    line-height: var(--eig-button-default-line-height);
+    text-align: center;
+    border-radius: var(--eig-button-border-radius);
+    cursor: pointer;
+    transition: opacity var(--eig-animation-duration-fast);
+    -webkit-appearance: none;
+    &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        background: var(--eig-black);
+        border: inherit;
+        border-color: var(--eig-black);
+        border-radius: inherit;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        content: '';
+    }
+
+    &:active::before {
+        opacity: 0.1;
+    }
+
+    &--loading, 
+    &--disabled {
+        &::before {
+            display: none;
+        }
+    }
+
+    &--default {
+        color: var(--eig-button-default-color);
+        background: var(--eig-button-default-background-color);
+        border: var(--eig-button-border-width) solid var(--eig-button-default-border-color);
+    }
+
+    &--primary {
+        color: var(--eig-button-primary-color);
+        background: var(--eig-button-primary-background-color);
+        border: var(--eig-button-border-width) solid var(--eig-button-primary-border-color);
+    }
+
+    &--danger {
+        color: var(--eig-button-danger-color);
+        background: var(--eig-button-danger-background-color);
+        border: var(--eig-button-border-width) solid var(--eig-button-danger-border-color);
+    }
+
+    &--warning {
+        color: var(--eig-button-warning-color);
+        background: var(--eig-button-warning-background-color);
+        border: var(--eig-button-border-width) solid var(--eig-button-warning-border-color);
+    }
+
+    &--plain {
+        background: var(--eig-button-plain-background-color);
+        &.eig-button--primary {
+            color: var(--eig-button-primary-background-color);
+        }
+        &.eig-button--success {
+            color: var(--eig-button-success-background-color);
+        }
+        &.eig-button--danger {
+            color: var(--eig-button-danger-background-color);
+        }
+        &.eig-button--warning {
+            color: var(--eig-button-warning-background-color);
+        }
+    }
+    &--large {
+        width: 100%;
+        height: var(--eig-button-large-height);
+    }
+    &--normal {
+        padding: var(--eig-button-normal-padding);
+        font-size: var(--eig-button-normal-font-size);
+    }
+    &--small {
+        height: var(--eig-button-small-height);
+        padding: var(--eig-button-small-padding);
+        font-size: var(--eig-button-small-font-size);
+    }
+    &__loading {
+        color: inherit;
+        font-size: inherit;
+        .eig-loading__spinner {
+            color:currentColor;
+            width: var(--eig-button-loading-icon-size);
+            height: var(--eig-button-loading-icon-size);
+        }
+    }
+
+    &--mini {
+        height: var(--eig-button-mini-height);
+        padding: var(--eig-button-mini-padding);
+        font-size: var(--eig-button-mini-font-size);
+    }
+
+    & + .eig-button--mini {
+        margin-left: var(--eig-padding-base);
+
+    }
+
+    &--block {
+        display: block;
+        width: 100%;
+    }
+
+    &--disabled {
+        cursor: not-allowed;
+        opacity: var(--eig-button-disabled-opacity);
+    }
+    &--loading {
+        cursor: default;
+    }
+    &--round {
+        border-radius: var(--eig-button-round-border-radius);
+    }
+    &--square {
+        border-radius: 0;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        &::before {
+            content: '';
+        }
+    }
+    &__icon {
+        font-size: var(--eig-button-icon-size);
+        line-height: inherit;
+    }
+    &__icon + &__text,
+    &__loading + &__text,
+    &__text + &__icon,
+    &__text + &__loading {
+        margin-left: var(--eig-padding-base);
+    }
+
+    &--hairline {
+        border-width: 0;
+        &::after {
+            border-color: inherit;
+            border-radius: calc(var(--eig-button-border-radius) * 2);
+        }
+        &.eig-button--round::after {
+            border-radius: var(--eig-button-round-border-radius);
+        }
+        &.eig-button--square::after {
+            border-radius: 0;
+        }
+    }
+}

@@ -1,0 +1,140 @@
+/**
+ 动画模块 
+ $keyframeName 动画类名
+ $timingFun 时间函数
+ $duration 过度时间
+**/
+
+@mixin make-animation(
+  $keyframeName,
+  $timingFun: $animation-timing-fun,
+  $duration: $animation-duration
+) {
+  .#{$keyframeName}-enter-active,
+  .#{$keyframeName}In,
+  .#{$keyframeName}-leave-active,
+  .#{$keyframeName}Out {
+    animation-duration: $duration;
+    animation-fill-mode: both;
+    animation-timing-function: $timingFun;
+  }
+
+  .#{$keyframeName}-enter-active,
+  .#{$keyframeName}In {
+    animation-name: #{$keyframeName}In;
+  }
+
+  .#{$keyframeName}-leave-active,
+  .#{$keyframeName}Out {
+    animation-name: #{$keyframeName}Out;
+  }
+}
+
+@keyframes eig-slide-up-enter {
+  from {
+    transform:  translate3d(0, 100%, 0);
+  } 
+}
+
+@keyframes eig-slide-up-leave {
+  to {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes eig-slide-down-enter {
+  from {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes eig-slide-down-leave {
+  to {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes eig-slide-left-enter {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes eig-slide-right-enter {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes eig-slide-right-leave {
+   to {
+     transform: translate3d(100%, 0, 0);
+   }
+}
+
+@keyframes eig-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes eig-fade-out {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+}
+
+.eig-fade {
+  &-enter-active {
+    animation: var(--eig-animation-duration-base) eight-fade-in both var(--eig-animation-function-enter);
+  }
+
+  &-leave-active {
+    animation: var(--eig-animation-duration-base) eight-fade-out both var(--eig-animation-function-leave);
+  }
+}
+
+.eig-slide-up {
+  &-enter-active {
+    animation: eig-slide-up-enter var(--eig-animation-duration-base) both var(--eig-animation-function-enter);
+  }
+  &-leave-active {
+    animation: eig-slide-up-leave var(--eig-animation-duration-base) both var(--eig-animation-function-leave);
+  }
+}
+
+.eig-slide-down {
+  &-enter-active {
+    animation: eig-slide-down-enter var(--eig-animation-duration-base) both var(--eig-animation-function-enter);
+  }
+  &-leave-active {
+    animation: eig-slide-down-leave var(--eig-animation-duration-base) both var(--eig-animation-function-leave);
+  }
+}
+
+.eig-slide-left {
+  &-enter-active {
+    animation: eig-slide-left-enter var(--eig-animation-duration-base) both var(--eig-animation-function-enter);
+  }
+  &-leave-active {
+    animation: eig-slide-left-leave var(--eig-animation-duration-base) both var(--eig-animation-function-leave);
+  }
+}
+
+.eig-slide-right {
+  &-enter-active {
+    animation: eig-slide-right-enter var(--eig-animation-duration-base) both var(--eig-animation-function-enter);
+
+  }
+
+  &-leave-active {
+    animation: eig-slide-right-leave var(--eig-animation-duration-base) both var(--eig-animation-function-leave);
+  }
+}

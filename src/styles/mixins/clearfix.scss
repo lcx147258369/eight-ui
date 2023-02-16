@@ -1,0 +1,8 @@
+@mixin clearfix {
+    // vant 使用的函数
+    &::after {
+        display: table;
+        clear: both;
+        content: ''
+    }
+}

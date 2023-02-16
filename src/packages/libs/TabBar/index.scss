@@ -1,0 +1,29 @@
+
+
+.eight_bottom-tab {
+    width: 100%;
+    height: 98px;
+    font-size: 10px;
+    color: $disable-color;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    .eight_bottom-tab-item {
+        flex: 1;
+        &>img {
+            display: inline-block;
+            width: 44px;
+            height: 44px;
+        }
+        .item-title {
+            line-height: 30px;
+        }
+        .item-title.active {
+            color: $primary-color;
+        }
+        .eight-icon {
+            font-size: 44px;
+        }
+        
+    }
+}

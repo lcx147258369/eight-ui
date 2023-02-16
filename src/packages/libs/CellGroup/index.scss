@@ -1,0 +1,26 @@
+@import './var.scss';
+
+:root {
+    --eig-cell-group-background-color: #{$cell-group-background-color};
+    --eig-cell-group-title-color: #{$cell-group-title-color};
+    --eig-cell-group-title-padding: #{$cell-group-title-padding};
+    --eig-cell-group-title-font-size: #{$cell-group-title-font-size};
+    --eig-cell-group-title-line-height: #{$cell-group-title-line-height};
+    --eig-cell-group-inset-padding:#{$cell-group-inset-padding};
+    --eig-cell-group-inset-border-radius: #{$cell-group-inset-border-radius};
+    --eig-cell-group-inset-title-padding: #{$cell-group-inset-title-padding}; 
+}
+.eig-cell-group {
+    background: var(--eig-cell-group-background-color);
+    &--inset {
+        margin: var(--eig-cell-group-inset-padding);
+        border-radius: var(--eig-cell-group-inset-border-radius);
+        overflow: hidden;
+    }
+    &__title {
+        padding: var(--eig-cell-group-title-padding);
+        color: var(--eig-cell-group-title-color);
+        font-size: var(--eig-cell-group-title-font-size);
+        line-height: var(--eig-cell-group-title-line-height);
+    }
+}

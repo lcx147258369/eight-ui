@@ -1,0 +1,10 @@
+@import '../../../styles/css-var.scss';
+
+$cell-group-background-color: var(--eig-background-color-light);
+$cell-group-title-color: var(--eig-text-color-2);
+$cell-group-title-padding: var(--eig-padding-md) var(--eig-padding-md) var(--eig-padding-xs);
+$cell-group-title-font-size: var(--eig-font-size-md);
+$cell-group-title-line-height: 16px;
+$cell-group-inset-padding: 0 var(--eig-padding-md);
+$cell-group-inset-border-radius: var(--eig-border-radius-lg);
+$cell-group-inset-title-padding: var(--eig-padding-md) var(--eig-padding-md) var(--eig-padding-xs) var(--eig-padding-xl);

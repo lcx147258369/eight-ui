@@ -1,0 +1,37 @@
+@import '../../../styles/css-var.scss';
+
+$button-mini-height: 24px;
+$button-mini-padding: 0 var(--eig-padding-base);
+$button-mini-font-size: var(--eig-font-size-xs);
+$button-small-height: 32px;
+$button-small-padding: 0 var(--eig-padding-xs);
+$button-small-font-size: var(--eig-font-size-sm);
+$button-normal-font-size: var(--eig-font-size-md);
+$button-normal-padding: 0 15px;
+$button-large-height: 50px;
+$button-default-height: 44px;
+$button-default-line-height: 1.2;
+$button-default-font-size: var(--eig-font-size-lg);
+$button-default-color: var(--eig-text-color);
+$button-default-background-color: var(--eig-background-color-light);
+$button-default-border-color: var(--eig-border-color);
+$button-primary-color: var(--eig-white);
+$button-primary-background-color: var(--eig-primary-color);
+$button-primary-border-color: var(--eig-primary-color);
+$button-success-color: var(--eig-white);
+$button-success-background-color: var(--eig-success-color);
+$button-success-border-color: var(--eig-success-color);
+$button-danger-color: var(--eig-white);
+$button-danger-background-color: var(--eig-danger-color);
+$button-danger-border-color: var(--eig-danger-color);
+$button-warning-color: var(--eig-white);
+$button-warning-background-color: var(--eig-warning-color);
+$button-warning-border-color: var(--eig-warning-color);
+$button-border-width: var(--eig-border-width-base);
+$button-border-radius: var(--eig-border-radius-sm);
+$button-round-border-radius: var(--eig-border-radius-max);
+$button-plain-background-color: var(--eig-white);
+$button-disabled-opacity: var(--eig-disabled-opacity);
+$button-icon-size: 1.2em;
+$button-loading-icon-size: 20px;
+

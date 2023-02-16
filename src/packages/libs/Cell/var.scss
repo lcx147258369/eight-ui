@@ -1,0 +1,21 @@
+@import '../../../styles/css-var.scss';
+
+$cell-font-size: var(--eig-font-size-md);
+$cell-line-height: 24px;
+$cell-vertical-padding: 10px;
+$cell-horizontal-padding: var(--eig-padding-md);
+$cell-text-color: var(--eig-text-color);
+$cell-background-color: var(--eig-background-color-light);
+$cell-border-color: var(--eig-border-color);
+$cell-active-color: var(--eig-active-color);
+$cell-required-color: var(--eig-danger-color);
+$cell-label-color: var(--eig-text-color-2);
+$cell-label-font-size: var(--eig-font-size-sm);
+$cell-label-line-height: var(--eig-line-height-sm);
+$cell-label-margin-top: var(--eig-padding-base);
+$cell-value-color: var(--eig-text-color-2);
+$cell-icon-size: 16px;
+$cell-icon-color: var(--eig-gray-6);
+$cell-large-vertical-padding: var(--eig-padding-sm);
+$cell-large-title-font-size: var(--eig-font-size-lg);
+$cell-large-label-font-size: var(--eig-font-size-md);
